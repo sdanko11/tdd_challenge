@@ -1,9 +1,7 @@
 require 'rspec'
-require 'pry'
 require_relative 'load_data'
 require_relative 'employee'
 require_relative 'tax_calculator'
-require_relative 'liability_class'
 
 describe TaxCalculator do
 
