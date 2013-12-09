@@ -9,5 +9,5 @@ class Employee
     @tax_paid = employee_data['tax_paid'].to_f || 0
     @tax_rate = employee_data['tax_rate'].to_f || 0
   end
-  
+
 end
