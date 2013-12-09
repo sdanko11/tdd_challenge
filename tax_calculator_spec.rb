@@ -8,6 +8,7 @@ describe TaxCalculator do
   let(:employee1) { Employee.new({"annual_income" => "1000", "tax_rate" => "5", "tax_paid" => "0"}) }
   let(:employee2) { Employee.new({"annual_income" => "1000", "tax_rate" => "10", "tax_paid" => "500"}) }
   let(:employee3) { Employee.new({"annual_income" => "10", "tax_rate" => "10", "tax_paid" => "3"}) }
+  let(:employee4) { Employee.new({"annual_income" => "0", "tax_rate" => "10", "tax_paid" => "10"}) }
 
     it 'calculate the amount of taxes that an employee owes' do
       steve = TaxCalculator.new(employee1)
@@ -29,6 +30,12 @@ describe TaxCalculator do
       person = TaxCalculator.new(employee3)
       person.calculate_tax
       expect(person.refund_amount).to eql(2.0)
+    end
+
+    it "should calculate the amount of money a employee gets in a refund" do
+      person = TaxCalculator.new(employee4)
+      person.calculate_tax
+      expect(person.refund_amount).to eql(10.0)
     end
 
 end
