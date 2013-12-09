@@ -14,7 +14,7 @@ employees.all_persons.each do |person|
     person_info = employee.money_owed
       puts "#{person_info.first_name} #{person_info.last_name} has a tax liability of #{person_info.amount_due}"
   else
-    employee.refund_amount
+    # employee.refund_amount
     puts "#{employee.first_name} #{employee.last_name} will receive a refund of #{employee.refund_amount}"
   end
 end

@@ -1,4 +1,3 @@
-require 'pry'
 class TaxCalculator
 
   attr_reader :refund_amount, :first_name, :last_name
@@ -27,7 +26,7 @@ class TaxCalculator
   end
 
   def refund_amount
-    @refund_amount += (@tax_paid - @taxes_owed).round(2)
+    (@tax_paid - @taxes_owed).round(2)
   end
 
   def liability

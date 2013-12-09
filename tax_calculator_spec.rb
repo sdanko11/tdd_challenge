@@ -22,7 +22,6 @@ describe TaxCalculator do
     it "should calculate the amount of money a employee gets a refund" do
       person = TaxCalculator.new(employee2)
       person.calculate_tax
-      binding.pry
       expect(person.refund_amount).to eql(400.0)
     end
 
